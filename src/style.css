@@ -1,0 +1,251 @@
+h1{
+  text-align: center;
+  text-decoration: underline;
+  background-color: #4D2774;
+  color: #DB8A74;
+  padding-bottom: 13px;
+  padding-top: 13px;
+}
+
+#table-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Table Controls (Sort, Filter, Refresh Buttons) */
+.table-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+}
+
+.sort-btn, .filter-btn, .refresh-btn {
+  color: #5856D6;
+  margin-right: 10px;
+}
+
+.active-btn {
+  background-color: #8b0000;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.active-btn span {
+  margin-right: -10px;
+  margin-top: -16px;
+  margin-bottom: -20px;
+}
+
+.reset-icon {
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  margin-left: 10px;
+}
+
+.reset-icon img {
+  width: 50px;
+  height: 40px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #5856D6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #5856D6;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDE;
+  font-size: 19px;
+}
+
+th {
+  color: #4F227D;
+  border-bottom: 2px solid #4D2774;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  background-color: #673AB7;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 90%;
+  max-width: 700px;
+  display: none;
+}
+
+
+.popup-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2F243A;
+  color: #DB8A74;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+}
+
+.popup-header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.popup-header-left img {
+  margin: 20px;
+}
+
+.popup-content {
+  background: white;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content h3 {
+  color: #c87f6d;
+  margin-bottom: 15px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sort-field, .filter-field {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-left: -10px;
+}
+
+#sort-fields, #filter-fields {
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sort-fields button:hover, #filter-fields button:hover {
+  background: #311B92;
+}
+
+#submit-sort, #submit-filter {
+  background-color: #4F227D;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+#reset-sort, #reset-filter {
+  background-color: white;
+  color: #7E1913;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+#add-sort, #add-filter {
+  color: #5856D6;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.cancel {
+  background-color: #2F243A;
+  border: none;
+  margin-right: 15px;
+}
