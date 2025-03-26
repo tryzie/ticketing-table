@@ -8,7 +8,7 @@ import refreshIcon from '../images/refresh-icon.svg';
 import closeIcon from '../images/close.svg';
 
 const PersonalDetails = () => {
-    const API_URL = "https://cors-anywhere.herokuapp.com/http://services.odata.org/TripPinRESTierService/People";
+    const API_URL = "https://corsproxy.io/?http://services.odata.org/TripPinRESTierService/People";
     const PAGE_SIZE_OPTIONS = [5, 10, 25, 50];
 
     const [currentPage, setCurrentPage] = useState(1);
