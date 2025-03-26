@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React from 'react';
 import PersonalDetails from './components/PersonalDetails';
 import './style.css';
